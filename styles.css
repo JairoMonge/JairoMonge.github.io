@@ -41,7 +41,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 1em 2em; /* Añadir márgenes laterales */
+    margin: 1em auto; /* Centramos el contenedor con auto */
 }
 
 .profile-pic {
@@ -161,7 +161,8 @@ a:hover {
 @media (max-width: 768px) {
     .container, .knowledge-container {
         padding: 2em;
-        margin: 1em 2em; /* Márgenes laterales */
+        width: 90%;
+        margin: 1em auto; /* Centramos el contenedor con auto */
     }
 
     .profile-pic {
@@ -194,7 +195,8 @@ a:hover {
 @media (max-width: 480px) {
     .container, .knowledge-container {
         padding: 1em;
-        margin: 0.5em 1em; /* Márgenes laterales */
+        width: 90%;
+        margin: 0.5em auto; /* Centramos el contenedor con auto */
     }
 
     .profile-pic {
@@ -205,7 +207,7 @@ a:hover {
 
     h1 {
         font-size: 1.5em;
-        margin-top: 8em; /* Aumentar el margen superior para evitar superposición */
+        margin-top: 4em; /* Aumentar el margen superior para evitar superposición */
     }
 
     p {
@@ -223,6 +225,7 @@ a:hover {
         padding: 0 1em; /* Añadir padding lateral */
     }
 }
+
 
 
 
