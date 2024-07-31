@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: 'Inconsolata', monospace;
     margin: 0;
@@ -9,11 +10,12 @@ body {
 
 .section {
     width: 100%;
-    height: 100vh; /* Hace que la sección ocupe toda la altura de la pantalla */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 2em;
 }
 
 .orange-section {
@@ -26,7 +28,6 @@ body {
     background-color: #d8e5a2;
     background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 10px, transparent 1px);
     background-size: 20px 20px;
-    
 }
 
 .container, .knowledge-container {
@@ -40,6 +41,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin: 1em 2em; /* Añadir márgenes laterales */
 }
 
 .profile-pic {
@@ -147,14 +149,79 @@ a:hover {
     font-size: 1.2em;
     color: #FF5722;
     margin-bottom: 0.5em;
-   
     font-weight: bold;
-    
 }
 
 .knowledge-item p {
     font-size: 1em;
     color: #595656;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .container, .knowledge-container {
+        padding: 2em;
+        margin: 1em 2em; /* Márgenes laterales */
+    }
+
+    .profile-pic {
+        width: 10em;
+        height: 10em;
+        top: -5em;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-top: 7em; /* Aumentar el margen superior para evitar superposición */
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .knowledge-list {
+        flex-direction: column; /* Asegurar una sola columna */
+    }
+
+    .knowledge-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 0.5em 0; /* Añadir márgenes superior e inferior */
+        padding: 0 1em; /* Añadir padding lateral */
+    }
+}
+
+@media (max-width: 480px) {
+    .container, .knowledge-container {
+        padding: 1em;
+        margin: 0.5em 1em; /* Márgenes laterales */
+    }
+
+    .profile-pic {
+        width: 12em;
+        height: 12em;
+        top: -6em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-top: 8em; /* Aumentar el margen superior para evitar superposición */
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .knowledge-list {
+        flex-direction: column; /* Asegurar una sola columna */
+    }
+
+    .knowledge-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 0.5em 0; /* Añadir márgenes superior e inferior */
+        padding: 0 1em; /* Añadir padding lateral */
+    }
 }
 
 
